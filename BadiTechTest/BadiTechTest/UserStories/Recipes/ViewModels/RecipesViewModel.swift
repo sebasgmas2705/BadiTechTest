@@ -21,6 +21,7 @@ class RecipesViewModel {
     }
     
     func requestRecipes(ingredientsUrl: String, delegate: NetworkDelegate){
+        
         dataSource.requestRecipes(delegate: delegate, ingredientsUrl: ingredientsUrl)
     }
 

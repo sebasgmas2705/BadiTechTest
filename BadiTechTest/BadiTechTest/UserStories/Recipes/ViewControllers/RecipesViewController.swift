@@ -10,61 +10,33 @@ import UIKit
 import Kingfisher
 
 class RecipesViewController: SharedViewController {
-        
-    @IBOutlet weak var searchButton: UIButton!
 
     @IBOutlet weak var searchBar: UISearchBar!
     {
         didSet {
             searchBar.delegate = self
+            searchBar.searchBarStyle = .minimal
         }
     }
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
-            //RecipeCollectionViewCell
             collectionView.register(UINib(nibName: "RecipeCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "RecipeCollectionViewCell")
-            
             collectionView.delegate = self
             collectionView.dataSource = self
         }
     }
     
-    
     let viewModel = RecipesViewModel()
-    
-    //CHECK: - should this be created in this class
-    var ingredientsToRequest: [String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewModel.requestRecipes(delegate: self)
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func stopLoadingWithSucces(_ idRequest: String) {
-        print("acabe de cargar")
+        stopActivityIndicator()
         collectionView.reloadData()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func searchTapped(_ sender: Any) {
-        var ingrArray: [String]?
-        guard let ingredients = searchBar.text else {return}
-        let ingredientsArray = ingredients.components(separatedBy: ",")
-        for ingredient in ingredientsArray {
-            let ingr = ingredient.trimmingCharacters(in: .whitespacesAndNewlines)
-            ingrArray?.append(ingr)
-        }
-        
-        if ingredientsArray.count > 1 {
-            
-        }else{
-            viewModel.requestRecipes(ingredientsUrl: ingredientsArray[0], delegate: self)
-        }
-        for ingredient in ingredientsArray {
-            
-        }
     }
 
 }
@@ -91,11 +63,43 @@ extension RecipesViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.recipeIngredients.text = recipeAtIndex?.ingredients
         cell.recipeImage.kf.setImage(with: recipeAtIndex?.thumbnail)
         
-        
-        
         return cell
     }
     
 }
 
-extension RecipesViewController: UISearchBarDelegate {}
+extension RecipesViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let ingredients = searchBar.text else {return}
+        let ingredientsArray = ingredients.components(separatedBy: ",")
+        if ingredientsArray.count > 1 {
+            var ingredientsURL: String = ""
+            for (_, ingredient) in ingredientsArray.enumerated() {
+                let ingredientTrimmed = ingredient.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsURL = ingredientsURL+",\(ingredientTrimmed)"
+            }
+            ingredientsURL.remove(at: ingredientsURL.startIndex)
+            viewModel.requestRecipes(ingredientsUrl: ingredientsURL.lowercased(), delegate: self)
+        }else{
+            viewModel.requestRecipes(ingredientsUrl: ingredientsArray[0].lowercased(), delegate: self)
+        }
+        searchBar.resignFirstResponder()
+    }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

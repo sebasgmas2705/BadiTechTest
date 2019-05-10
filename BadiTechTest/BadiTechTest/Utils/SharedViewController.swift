@@ -9,21 +9,36 @@
 import UIKit
 
 class SharedViewController: UIViewController, NetworkDelegate {
+    
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func startActivityIndicator() {
+        view.addSubview(activityIndicator)
+        activityIndicator.frame = view.bounds
+        activityIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        activityIndicator.removeFromSuperview()
+    }
+    
     func startLoading(_ idRequest: String) {
-        print("startloading")
+        startActivityIndicator()
     }
     
     func stopLoadingWithSucces(_ idRequest: String) {
-        print("stop WITH SUCCESS")
+        stopActivityIndicator()
     }
     
     func stopLoadingWithError(_ idRequest: String) {
-        print("STOP WITH FAILURE")
+        stopActivityIndicator()
+        let alert = UIAlertController(title: Constants.TITLE_ERROR, message: Constants.BODY_ERROR, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.BUTTON_ERROR, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

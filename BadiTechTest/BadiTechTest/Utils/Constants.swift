@@ -11,4 +11,10 @@ import Foundation
 struct Constants {
     static let API_BASE_URL = "http://www.recipepuppy.com/api/?i="
     static let PAGINATION = "&p=1"
+    
+    static let SEARCH = "Search"
+    
+    static let TITLE_ERROR = "Error with API"
+    static let BODY_ERROR = "Couldn't request data from the server"
+    static let BUTTON_ERROR = "Ok"
 }

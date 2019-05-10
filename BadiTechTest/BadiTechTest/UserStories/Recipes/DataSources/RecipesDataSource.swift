@@ -17,6 +17,7 @@ class RecipesDataSource {
     func requestRecipes(delegate: NetworkDelegate, ingredientsUrl: String) {
         
         delegate.startLoading("no id needed")
+        print(ingredientsUrl)
 
         let urlString = Constants.API_BASE_URL+ingredientsUrl+Constants.PAGINATION
         guard let url = URL(string: urlString) else { return }
@@ -34,7 +35,7 @@ class RecipesDataSource {
                 }
                 
                 guard let header = try? JSONDecoder().decode(JHeader.self, from: data) else {
-                    print("Error: Couldn't decode data into Blog")
+                    print("Error: Couldn't decode data into JHeader")
                     delegate.stopLoadingWithError("not needed")
                     return
                 }
