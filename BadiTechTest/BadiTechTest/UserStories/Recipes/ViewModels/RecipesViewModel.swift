@@ -16,8 +16,12 @@ class RecipesViewModel {
         return dataSource.recipesArray?.count ?? 0
     }
     
-    func requestRecipes(delegate: NetworkDelegate){
-        dataSource.requestRecipes(delegate: delegate)
+    func getRecipe(atIndex index: Int) -> Recipe? {
+        return dataSource.recipesArray?[index]
+    }
+    
+    func requestRecipes(ingredientsUrl: String, delegate: NetworkDelegate){
+        dataSource.requestRecipes(delegate: delegate, ingredientsUrl: ingredientsUrl)
     }
 
 }

@@ -11,13 +11,18 @@
 		53D43DF52285BC5E00BE06FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D43DF32285BC5E00BE06FD /* Main.storyboard */; };
 		53D43DF72285BC5F00BE06FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D43DF62285BC5F00BE06FD /* Assets.xcassets */; };
 		53D43DFA2285BC5F00BE06FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D43DF82285BC5F00BE06FD /* LaunchScreen.storyboard */; };
-		53D43E0E2285BE2500BE06FD /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E0D2285BE2500BE06FD /* Recipes.swift */; };
+		53D43E0E2285BE2500BE06FD /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E0D2285BE2500BE06FD /* Recipe.swift */; };
 		53D43E102285BF6F00BE06FD /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E0F2285BF6F00BE06FD /* RecipesViewModel.swift */; };
 		53D43E122285BF9500BE06FD /* RecipesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E112285BF9500BE06FD /* RecipesDataSource.swift */; };
 		53D43E142285C19200BE06FD /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E132285C19200BE06FD /* NetworkDelegate.swift */; };
 		53D43E182285C1F800BE06FD /* SharedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E172285C1F800BE06FD /* SharedViewController.swift */; };
 		53D43E1A2285C35700BE06FD /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E192285C35700BE06FD /* RecipesViewController.swift */; };
 		53D43E1E2285D23F00BE06FD /* JHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E1D2285D23F00BE06FD /* JHeader.swift */; };
+		53D43E202285DA9500BE06FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E1F2285DA9500BE06FD /* Constants.swift */; };
+		53D43E232285DCDD00BE06FD /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E212285DCDD00BE06FD /* RecipeCollectionViewCell.swift */; };
+		53D43E242285DCDD00BE06FD /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53D43E222285DCDD00BE06FD /* RecipeCollectionViewCell.xib */; };
+		53D43E2A2285F54F00BE06FD /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E292285F54F00BE06FD /* Ingredient.swift */; };
+		61E27B0F14879AE6D9FABD86 /* Pods_BadiTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAD393A903F15AB74B33530 /* Pods_BadiTechTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,13 +32,20 @@
 		53D43DF62285BC5F00BE06FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53D43DF92285BC5F00BE06FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53D43DFB2285BC5F00BE06FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53D43E0D2285BE2500BE06FD /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		53D43E0D2285BE2500BE06FD /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		53D43E0F2285BF6F00BE06FD /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 		53D43E112285BF9500BE06FD /* RecipesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDataSource.swift; sourceTree = "<group>"; };
 		53D43E132285C19200BE06FD /* NetworkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
 		53D43E172285C1F800BE06FD /* SharedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewController.swift; sourceTree = "<group>"; };
 		53D43E192285C35700BE06FD /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		53D43E1D2285D23F00BE06FD /* JHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHeader.swift; sourceTree = "<group>"; };
+		53D43E1F2285DA9500BE06FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		53D43E212285DCDD00BE06FD /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		53D43E222285DCDD00BE06FD /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
+		53D43E292285F54F00BE06FD /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		61AFBDA8CF55341A85EB8C51 /* Pods-BadiTechTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadiTechTest.release.xcconfig"; path = "Target Support Files/Pods-BadiTechTest/Pods-BadiTechTest.release.xcconfig"; sourceTree = "<group>"; };
+		7FAD393A903F15AB74B33530 /* Pods_BadiTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadiTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2C90ECDCC80D8F607B45C6 /* Pods-BadiTechTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadiTechTest.debug.xcconfig"; path = "Target Support Files/Pods-BadiTechTest/Pods-BadiTechTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E27B0F14879AE6D9FABD86 /* Pods_BadiTechTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A6030C08B43D340757C647A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC2C90ECDCC80D8F607B45C6 /* Pods-BadiTechTest.debug.xcconfig */,
+				61AFBDA8CF55341A85EB8C51 /* Pods-BadiTechTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		53D43DE32285BC5E00BE06FD = {
 			isa = PBXGroup;
 			children = (
 				53D43DEE2285BC5E00BE06FD /* BadiTechTest */,
 				53D43DED2285BC5E00BE06FD /* Products */,
+				2A6030C08B43D340757C647A /* Pods */,
+				BC51D232BB118CFC0865DD40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +118,9 @@
 		53D43E032285BCD000BE06FD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				53D43E0D2285BE2500BE06FD /* Recipes.swift */,
+				53D43E0D2285BE2500BE06FD /* Recipe.swift */,
 				53D43E1D2285D23F00BE06FD /* JHeader.swift */,
+				53D43E292285F54F00BE06FD /* Ingredient.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -115,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				53D43E172285C1F800BE06FD /* SharedViewController.swift */,
+				53D43E1F2285DA9500BE06FD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -166,8 +192,18 @@
 		53D43E0C2285BD8200BE06FD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				53D43E212285DCDD00BE06FD /* RecipeCollectionViewCell.swift */,
+				53D43E222285DCDD00BE06FD /* RecipeCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BC51D232BB118CFC0865DD40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FAD393A903F15AB74B33530 /* Pods_BadiTechTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53D43DFE2285BC5F00BE06FD /* Build configuration list for PBXNativeTarget "BadiTechTest" */;
 			buildPhases = (
+				ADECDFA3E073D6F7A56AA142 /* [CP] Check Pods Manifest.lock */,
 				53D43DE82285BC5E00BE06FD /* Sources */,
 				53D43DE92285BC5E00BE06FD /* Frameworks */,
 				53D43DEA2285BC5E00BE06FD /* Resources */,
+				054C43BA373EDEF4F6B2E620 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D43E242285DCDD00BE06FD /* RecipeCollectionViewCell.xib in Resources */,
 				53D43DFA2285BC5F00BE06FD /* LaunchScreen.storyboard in Resources */,
 				53D43DF72285BC5F00BE06FD /* Assets.xcassets in Resources */,
 				53D43DF52285BC5E00BE06FD /* Main.storyboard in Resources */,
@@ -236,6 +275,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		054C43BA373EDEF4F6B2E620 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadiTechTest/Pods-BadiTechTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadiTechTest/Pods-BadiTechTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADECDFA3E073D6F7A56AA142 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BadiTechTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		53D43DE82285BC5E00BE06FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -243,12 +329,15 @@
 			files = (
 				53D43E1A2285C35700BE06FD /* RecipesViewController.swift in Sources */,
 				53D43E102285BF6F00BE06FD /* RecipesViewModel.swift in Sources */,
+				53D43E232285DCDD00BE06FD /* RecipeCollectionViewCell.swift in Sources */,
 				53D43E1E2285D23F00BE06FD /* JHeader.swift in Sources */,
 				53D43E122285BF9500BE06FD /* RecipesDataSource.swift in Sources */,
 				53D43E142285C19200BE06FD /* NetworkDelegate.swift in Sources */,
 				53D43E182285C1F800BE06FD /* SharedViewController.swift in Sources */,
-				53D43E0E2285BE2500BE06FD /* Recipes.swift in Sources */,
+				53D43E0E2285BE2500BE06FD /* Recipe.swift in Sources */,
 				53D43DF02285BC5E00BE06FD /* AppDelegate.swift in Sources */,
+				53D43E202285DA9500BE06FD /* Constants.swift in Sources */,
+				53D43E2A2285F54F00BE06FD /* Ingredient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +481,7 @@
 		};
 		53D43DFF2285BC5F00BE06FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2C90ECDCC80D8F607B45C6 /* Pods-BadiTechTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -409,6 +499,7 @@
 		};
 		53D43E002285BC5F00BE06FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AFBDA8CF55341A85EB8C51 /* Pods-BadiTechTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_BadiTechTest {
+  umbrella header "Pods-BadiTechTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
