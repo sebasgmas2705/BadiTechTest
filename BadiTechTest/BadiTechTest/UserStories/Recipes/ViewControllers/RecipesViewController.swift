@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecipesViewController.swift
 //  BadiTechTest
 //
 //  Created by Sebastian Gelabert on 10/05/2019.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecipesViewController: SharedViewController {
+    
+    let viewModel = RecipesViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        viewModel.requestRecipes(delegate: self)
+        print(viewModel.numberOfRecipes)
     }
 
-
 }
-

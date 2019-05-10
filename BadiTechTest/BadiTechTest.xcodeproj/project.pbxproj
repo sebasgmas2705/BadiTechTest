@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		53D43DF02285BC5E00BE06FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43DEF2285BC5E00BE06FD /* AppDelegate.swift */; };
-		53D43DF22285BC5E00BE06FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43DF12285BC5E00BE06FD /* ViewController.swift */; };
 		53D43DF52285BC5E00BE06FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D43DF32285BC5E00BE06FD /* Main.storyboard */; };
 		53D43DF72285BC5F00BE06FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D43DF62285BC5F00BE06FD /* Assets.xcassets */; };
 		53D43DFA2285BC5F00BE06FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D43DF82285BC5F00BE06FD /* LaunchScreen.storyboard */; };
+		53D43E0E2285BE2500BE06FD /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E0D2285BE2500BE06FD /* Recipes.swift */; };
+		53D43E102285BF6F00BE06FD /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E0F2285BF6F00BE06FD /* RecipesViewModel.swift */; };
+		53D43E122285BF9500BE06FD /* RecipesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E112285BF9500BE06FD /* RecipesDataSource.swift */; };
+		53D43E142285C19200BE06FD /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E132285C19200BE06FD /* NetworkDelegate.swift */; };
+		53D43E182285C1F800BE06FD /* SharedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E172285C1F800BE06FD /* SharedViewController.swift */; };
+		53D43E1A2285C35700BE06FD /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E192285C35700BE06FD /* RecipesViewController.swift */; };
+		53D43E1E2285D23F00BE06FD /* JHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D43E1D2285D23F00BE06FD /* JHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53D43DEC2285BC5E00BE06FD /* BadiTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadiTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D43DEF2285BC5E00BE06FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53D43DF12285BC5E00BE06FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53D43DF42285BC5E00BE06FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53D43DF62285BC5F00BE06FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53D43DF92285BC5F00BE06FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53D43DFB2285BC5F00BE06FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D43E0D2285BE2500BE06FD /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		53D43E0F2285BF6F00BE06FD /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
+		53D43E112285BF9500BE06FD /* RecipesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDataSource.swift; sourceTree = "<group>"; };
+		53D43E132285C19200BE06FD /* NetworkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
+		53D43E172285C1F800BE06FD /* SharedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewController.swift; sourceTree = "<group>"; };
+		53D43E192285C35700BE06FD /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		53D43E1D2285D23F00BE06FD /* JHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,108 @@
 		53D43DEE2285BC5E00BE06FD /* BadiTechTest */ = {
 			isa = PBXGroup;
 			children = (
-				53D43DEF2285BC5E00BE06FD /* AppDelegate.swift */,
-				53D43DF12285BC5E00BE06FD /* ViewController.swift */,
-				53D43DF32285BC5E00BE06FD /* Main.storyboard */,
-				53D43DF62285BC5F00BE06FD /* Assets.xcassets */,
-				53D43DF82285BC5F00BE06FD /* LaunchScreen.storyboard */,
-				53D43DFB2285BC5F00BE06FD /* Info.plist */,
+				53D43E012285BCB500BE06FD /* UserStories */,
+				53D43E022285BCC800BE06FD /* Network */,
+				53D43E032285BCD000BE06FD /* Entities */,
+				53D43E052285BCDD00BE06FD /* Utils */,
+				53D43E042285BCD600BE06FD /* Application */,
 			);
 			path = BadiTechTest;
+			sourceTree = "<group>";
+		};
+		53D43E012285BCB500BE06FD /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E072285BD3C00BE06FD /* Recipes */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		53D43E022285BCC800BE06FD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E132285C19200BE06FD /* NetworkDelegate.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		53D43E032285BCD000BE06FD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E0D2285BE2500BE06FD /* Recipes.swift */,
+				53D43E1D2285D23F00BE06FD /* JHeader.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		53D43E042285BCD600BE06FD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				53D43DFB2285BC5F00BE06FD /* Info.plist */,
+				53D43DF62285BC5F00BE06FD /* Assets.xcassets */,
+				53D43DF82285BC5F00BE06FD /* LaunchScreen.storyboard */,
+				53D43DEF2285BC5E00BE06FD /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		53D43E052285BCDD00BE06FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E172285C1F800BE06FD /* SharedViewController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		53D43E072285BD3C00BE06FD /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E082285BD4700BE06FD /* DataSources */,
+				53D43E092285BD5200BE06FD /* ViewModels */,
+				53D43E0A2285BD5B00BE06FD /* ViewControllers */,
+				53D43E0B2285BD6400BE06FD /* Views */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		53D43E082285BD4700BE06FD /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E112285BF9500BE06FD /* RecipesDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		53D43E092285BD5200BE06FD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E0F2285BF6F00BE06FD /* RecipesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		53D43E0A2285BD5B00BE06FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E192285C35700BE06FD /* RecipesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		53D43E0B2285BD6400BE06FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53D43E0C2285BD8200BE06FD /* Cells */,
+				53D43DF32285BC5E00BE06FD /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53D43E0C2285BD8200BE06FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +241,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53D43DF22285BC5E00BE06FD /* ViewController.swift in Sources */,
+				53D43E1A2285C35700BE06FD /* RecipesViewController.swift in Sources */,
+				53D43E102285BF6F00BE06FD /* RecipesViewModel.swift in Sources */,
+				53D43E1E2285D23F00BE06FD /* JHeader.swift in Sources */,
+				53D43E122285BF9500BE06FD /* RecipesDataSource.swift in Sources */,
+				53D43E142285C19200BE06FD /* NetworkDelegate.swift in Sources */,
+				53D43E182285C1F800BE06FD /* SharedViewController.swift in Sources */,
+				53D43E0E2285BE2500BE06FD /* Recipes.swift in Sources */,
 				53D43DF02285BC5E00BE06FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BadiTechTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BadiTechTest/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BadiTechTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BadiTechTest/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
