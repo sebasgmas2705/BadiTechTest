@@ -4,6 +4,8 @@ Challenge sent by Badi and coded by Sebastián Miguel Gelabert Mas.
 
 ## Make it work
 
+**Github link** https://github.com/sebasgmas2705/BadiTechTest
+
 In order to run this project just clone it and hit the run button in Xcode. It is  made for all those 'hangry' people. Come on, what are you waiting for!
 
 **Run the .xcworkspace**
