@@ -21,50 +21,66 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyd-MJ-l1G">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-aJ-Pec">
-                                <rect key="frame" x="15" y="169" width="370" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t_Ingredients:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-aJ-Pec">
+                                <rect key="frame" x="15" y="173" width="312" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZLo-sM-ZJQ">
-                                <rect key="frame" x="5" y="5" width="390" height="133"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3XK-la-K1N">
+                                <rect key="frame" x="10" y="14" width="380" height="127"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dBn-4H-KJv">
-                                <rect key="frame" x="5" y="5" width="390" height="133"/>
+                                <rect key="frame" x="10" y="14" width="380" height="127"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeS-WN-GCi">
-                                <rect key="frame" x="10" y="143" width="380" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t_Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeS-WN-GCi">
+                                <rect key="frame" x="10" y="148.5" width="317" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has lactose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd5-Wn-xkm">
-                                <rect key="frame" x="282" y="38" width="150" height="19.5"/>
+                                <rect key="frame" x="302" y="38" width="120" height="19.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="oOb-jw-8to"/>
+                                    <constraint firstAttribute="width" constant="120" id="oOb-jw-8to"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD2-bs-gZg">
+                                <rect key="frame" x="349" y="149" width="41" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="U6N-BH-Na4"/>
+                                    <constraint firstAttribute="height" constant="41" id="zfD-4z-S3g"/>
+                                </constraints>
+                                <state key="normal" title="FAV" image="star"/>
+                                <connections>
+                                    <action selector="favoriteTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2Lo-1I-EJp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="wKy-aJ-Pec" firstAttribute="top" secondItem="MeS-WN-GCi" secondAttribute="bottom" constant="5" id="2ef-gz-EQ7"/>
-                            <constraint firstItem="MeS-WN-GCi" firstAttribute="top" secondItem="dBn-4H-KJv" secondAttribute="bottom" constant="5" id="3ac-3h-Kc2"/>
-                            <constraint firstItem="MeS-WN-GCi" firstAttribute="top" secondItem="ZLo-sM-ZJQ" secondAttribute="bottom" constant="5" id="5Vh-lc-hXh"/>
-                            <constraint firstItem="wKy-aJ-Pec" firstAttribute="centerX" secondItem="eyd-MJ-l1G" secondAttribute="centerX" id="6hg-9u-EyQ"/>
+                            <constraint firstItem="wKy-aJ-Pec" firstAttribute="top" secondItem="MeS-WN-GCi" secondAttribute="bottom" constant="4" id="2ef-gz-EQ7"/>
+                            <constraint firstItem="MeS-WN-GCi" firstAttribute="top" secondItem="dBn-4H-KJv" secondAttribute="bottom" constant="7.5" id="3ac-3h-Kc2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sD2-bs-gZg" secondAttribute="bottom" constant="2" id="5gw-og-zUr"/>
+                            <constraint firstItem="wKy-aJ-Pec" firstAttribute="centerX" secondItem="eyd-MJ-l1G" secondAttribute="centerX" constant="-29" id="6hg-9u-EyQ"/>
                             <constraint firstAttribute="bottom" secondItem="wKy-aJ-Pec" secondAttribute="bottom" constant="10" id="8p3-vF-ll6"/>
-                            <constraint firstItem="ZLo-sM-ZJQ" firstAttribute="leading" secondItem="eyd-MJ-l1G" secondAttribute="leading" constant="5" id="O8l-rK-rbx"/>
-                            <constraint firstItem="MeS-WN-GCi" firstAttribute="centerX" secondItem="eyd-MJ-l1G" secondAttribute="centerX" id="R1Q-B4-8rW"/>
-                            <constraint firstItem="ZLo-sM-ZJQ" firstAttribute="top" secondItem="eyd-MJ-l1G" secondAttribute="top" constant="5" id="RQJ-lu-rXQ"/>
-                            <constraint firstItem="dBn-4H-KJv" firstAttribute="leading" secondItem="eyd-MJ-l1G" secondAttribute="leading" constant="5" id="Z4Z-jI-iLv"/>
-                            <constraint firstAttribute="trailing" secondItem="ZLo-sM-ZJQ" secondAttribute="trailing" constant="5" id="d6j-K5-pCM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zd5-Wn-xkm" secondAttribute="trailing" constant="-40" id="gAH-NF-ejS"/>
-                            <constraint firstAttribute="trailing" secondItem="dBn-4H-KJv" secondAttribute="trailing" constant="5" id="iHU-Y6-UkW"/>
+                            <constraint firstItem="MeS-WN-GCi" firstAttribute="top" secondItem="3XK-la-K1N" secondAttribute="bottom" constant="7.5" id="Bns-U0-N0R"/>
+                            <constraint firstAttribute="trailing" secondItem="3XK-la-K1N" secondAttribute="trailing" constant="10" id="FQm-oV-kYq"/>
+                            <constraint firstItem="3XK-la-K1N" firstAttribute="top" secondItem="eyd-MJ-l1G" secondAttribute="top" constant="14" id="H8l-uq-XvX"/>
+                            <constraint firstItem="MeS-WN-GCi" firstAttribute="centerX" secondItem="eyd-MJ-l1G" secondAttribute="centerX" constant="-31.5" id="R1Q-B4-8rW"/>
+                            <constraint firstItem="dBn-4H-KJv" firstAttribute="leading" secondItem="eyd-MJ-l1G" secondAttribute="leading" constant="10" id="Z4Z-jI-iLv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sD2-bs-gZg" secondAttribute="trailing" constant="2" id="f3n-oe-nq9"/>
+                            <constraint firstItem="3XK-la-K1N" firstAttribute="leading" secondItem="eyd-MJ-l1G" secondAttribute="leading" constant="10" id="fUF-mQ-Ax5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zd5-Wn-xkm" secondAttribute="trailing" constant="-30" id="gAH-NF-ejS"/>
+                            <constraint firstItem="sD2-bs-gZg" firstAttribute="top" secondItem="3XK-la-K1N" secondAttribute="bottom" constant="8" id="gle-t7-TBk"/>
+                            <constraint firstAttribute="trailing" secondItem="dBn-4H-KJv" secondAttribute="trailing" constant="10" id="iHU-Y6-UkW"/>
                             <constraint firstItem="wKy-aJ-Pec" firstAttribute="leading" secondItem="eyd-MJ-l1G" secondAttribute="leading" constant="15" id="mbG-jp-R1H"/>
-                            <constraint firstItem="dBn-4H-KJv" firstAttribute="top" secondItem="eyd-MJ-l1G" secondAttribute="top" constant="5" id="obx-sH-af6"/>
+                            <constraint firstItem="dBn-4H-KJv" firstAttribute="top" secondItem="eyd-MJ-l1G" secondAttribute="top" constant="14" id="obx-sH-af6"/>
                             <constraint firstItem="Zd5-Wn-xkm" firstAttribute="top" secondItem="eyd-MJ-l1G" secondAttribute="topMargin" constant="30" id="tqD-5T-z1j"/>
                             <constraint firstItem="MeS-WN-GCi" firstAttribute="leading" secondItem="eyd-MJ-l1G" secondAttribute="leading" constant="10" id="ual-Z0-KDK"/>
                         </constraints>
@@ -80,13 +96,17 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="400" height="95"/>
             <connections>
+                <outlet property="buttonFavorite" destination="sD2-bs-gZg" id="3nT-Z6-lwq"/>
                 <outlet property="hasLactoseLabel" destination="Zd5-Wn-xkm" id="Pbd-gj-uJ6"/>
                 <outlet property="recipeImage" destination="dBn-4H-KJv" id="rwP-SX-uir"/>
                 <outlet property="recipeIngredients" destination="wKy-aJ-Pec" id="NLp-MH-lTe"/>
                 <outlet property="recipeName" destination="MeS-WN-GCi" id="8a1-tR-Rvk"/>
-                <outlet property="shadowImage" destination="ZLo-sM-ZJQ" id="Iv7-B8-DcJ"/>
+                <outlet property="shadowImage" destination="3XK-la-K1N" id="Cz9-yI-sWK"/>
             </connections>
             <point key="canvasLocation" x="417.60000000000002" y="136.73163418290855"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="star" width="753.5" height="753.5"/>
+    </resources>
 </document>

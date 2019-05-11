@@ -11,7 +11,7 @@ import Foundation
 struct Recipe: Codable {
     
     let title: String?
-    let href: URL?
+    let href: String?
     let ingredients: String?
     let thumbnail: URL?
     
@@ -22,7 +22,7 @@ struct Recipe: Codable {
         case thumbnail = "thumbnail"
     }
     
-    init(title: String?, href: URL?, ingredients: String?, thumbnail: URL?) {
+    init(title: String?, href: String?, ingredients: String?, thumbnail: URL?) {
         self.title = title
         self.href = href
         self.ingredients = ingredients

@@ -16,8 +16,7 @@ class RecipesDataSource {
     
     func requestRecipes(delegate: NetworkDelegate, ingredientsUrl: String) {
         
-        delegate.startLoading("no id needed")
-        print(ingredientsUrl)
+        delegate.startLoading(Constants.NOT_NEEDED_ID)
 
         let urlString = Constants.API_BASE_URL+ingredientsUrl+Constants.PAGINATION
         guard let url = URL(string: urlString) else { return }
@@ -25,22 +24,22 @@ class RecipesDataSource {
             DispatchQueue.main.async {
                 if let err = error {
                     print("ERROR \(error)")
-                    delegate.stopLoadingWithError("not needed")
+                    delegate.stopLoadingWithError(Constants.NOT_NEEDED_ID)
                     return
                 }
                 guard let data = data else {
                     print("Error: No data to decode")
-                    delegate.stopLoadingWithError("not needed")
+                    delegate.stopLoadingWithError(Constants.NOT_NEEDED_ID)
                     return
                 }
                 
                 guard let header = try? JSONDecoder().decode(JHeader.self, from: data) else {
                     print("Error: Couldn't decode data into JHeader")
-                    delegate.stopLoadingWithError("not needed")
+                    delegate.stopLoadingWithError(Constants.NOT_NEEDED_ID)
                     return
                 }
                 self.recipesArray = header.results
-                delegate.stopLoadingWithSucces("not needed")
+                delegate.stopLoadingWithSucces(Constants.NOT_NEEDED_ID)
             }
         }.resume()
     }

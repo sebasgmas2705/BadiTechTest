@@ -11,9 +11,11 @@ import Foundation
 struct Ingredient {
     
     let ingredientName: String?
+    let hasLactose: Bool?
     
-    init(ingredientName: String?) {
+    init(ingredientName: String?, hasLactose: Bool?) {
         self.ingredientName = ingredientName
+        self.hasLactose = hasLactose
     }
     
 }

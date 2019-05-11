@@ -13,37 +13,51 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var recipeName: UILabel!
     @IBOutlet weak var recipeIngredients: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var shadowImage: UIImageView!
     @IBOutlet weak var hasLactoseLabel: UILabel!
+    @IBOutlet weak var shadowImage: UIImageView!
+    @IBOutlet weak var buttonFavorite: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setUpUIImage()
         rotateLabel()
-        addShadowUIImageView()
-        rouncCornersUIImageView()
+        addShadow()
+        roundCorners()
     }
+    
+    //MARK: - Actions
+    
+    @IBAction func favoriteTapped(_ sender: Any) {}
+    
     
     func setUpUIImage() {
         recipeImage.clipsToBounds = true
         recipeImage.contentMode = .scaleAspectFill
     }
     
-    func addShadowUIImageView() {
-        shadowImage.layer.shadowColor = UIColor.black.cgColor
-        shadowImage.layer.shadowOffset = CGSize(width: 1, height: 1)
-        shadowImage.layer.shadowOpacity = 1
-        shadowImage.layer.shadowRadius = 3.0
+    func addShadow() {
+        shadowImage.layer.shadowColor = UIColor.lightGray.cgColor
+        shadowImage.layer.shadowOffset = CGSize(width:1.0 ,height: 1.0)
+        shadowImage.layer.shadowRadius = 4.0
+        shadowImage.layer.shadowOpacity = 0.8
         shadowImage.layer.masksToBounds = false
+        
+        buttonFavorite.layer.shadowColor = UIColor.lightGray.cgColor
+        buttonFavorite.layer.shadowOffset = CGSize(width:1.0 ,height: 1.0)
+        buttonFavorite.layer.shadowRadius = 4.0
+        buttonFavorite.layer.shadowOpacity = 0.5
     }
     
-    func rouncCornersUIImageView() {
+    func roundCorners() {
         recipeImage.layer.cornerRadius = 8.0
+        shadowImage.layer.cornerRadius = 8.0
+        buttonFavorite.layer.cornerRadius = 8.0
     }
     
     func rotateLabel() {
         hasLactoseLabel.transform = CGAffineTransform(rotationAngle: .pi / 4)
+        hasLactoseLabel.isHidden = true
     }
 
 }

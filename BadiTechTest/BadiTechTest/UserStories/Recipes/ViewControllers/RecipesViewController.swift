@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SafariServices
 
 class RecipesViewController: SharedViewController {
 
@@ -28,25 +29,52 @@ class RecipesViewController: SharedViewController {
     }
     
     let viewModel = RecipesViewModel()
+    var searched: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        boardingMessage()
     }
     
     override func stopLoadingWithSucces(_ idRequest: String) {
         stopActivityIndicator()
         collectionView.reloadData()
     }
+    
+    func safariServices(_ href: String) {
+        if let url = URL(string: href) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
+    }
 
 }
 
-extension RecipesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension RecipesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width:collectionView.frame.size.width * 0.8,height: 250)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let hrefAtIndex = viewModel.getHrefFromRecipe(atIndex: indexPath.row) else {
+            return
+        }
+        safariServices(hrefAtIndex)
+    }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if viewModel.numberOfRecipes == 0 && searched ?? false {
+            noRecipesFoundAlert()
+        }
         return viewModel.numberOfRecipes
     }
     
@@ -58,7 +86,8 @@ extension RecipesViewController: UICollectionViewDelegate, UICollectionViewDataS
         }
         
         let recipeAtIndex = viewModel.getRecipe(atIndex: indexPath.row)
-        
+        cell.hasLactoseLabel.isHidden = true
+        checkIfContainsLactose(recipeAtIndex, cell)
         cell.recipeName.text = recipeAtIndex?.title
         cell.recipeIngredients.text = recipeAtIndex?.ingredients
         cell.recipeImage.kf.setImage(with: recipeAtIndex?.thumbnail)
@@ -66,11 +95,21 @@ extension RecipesViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    fileprivate func checkIfContainsLactose(_ recipeAtIndex: Recipe?, _ cell: RecipeCollectionViewCell) {
+        let ingredientsInArray = recipeAtIndex?.ingredients?.components(separatedBy: ",")
+        for ingredient in ingredientsInArray ?? [""] {
+            if ingredient == Constants.WHITESPACE_CHEESE || ingredient == Constants.CHEESE || ingredient == Constants.WHITESPACE_MILK || ingredient == Constants.MILK {
+                cell.hasLactoseLabel.isHidden = false
+            }
+        }
+    }
+    
 }
 
 extension RecipesViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searched = true
         guard let ingredients = searchBar.text else {return}
         let ingredientsArray = ingredients.components(separatedBy: ",")
         if ingredientsArray.count > 1 {
@@ -82,7 +121,12 @@ extension RecipesViewController: UISearchBarDelegate {
             ingredientsURL.remove(at: ingredientsURL.startIndex)
             viewModel.requestRecipes(ingredientsUrl: ingredientsURL.lowercased(), delegate: self)
         }else{
-            viewModel.requestRecipes(ingredientsUrl: ingredientsArray[0].lowercased(), delegate: self)
+            let ingredient = ingredientsArray[0]
+            if ingredient.hasPrefix(" ") ||  ingredient.hasSuffix(" "){
+                viewModel.requestRecipes(ingredientsUrl: ingredientsArray[0].lowercased().trimmingCharacters(in: .whitespacesAndNewlines), delegate: self)
+            }else{
+                viewModel.requestRecipes(ingredientsUrl: ingredientsArray[0].lowercased(), delegate: self)
+            }
         }
         searchBar.resignFirstResponder()
     }

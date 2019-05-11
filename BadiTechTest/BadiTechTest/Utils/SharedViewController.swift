@@ -41,4 +41,16 @@ class SharedViewController: UIViewController, NetworkDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func boardingMessage() {
+        let alert = UIAlertController(title: Constants.TITLE_BOARDING, message: Constants.BODY_BOARDING, preferredStyle: UIAlertController.Style.actionSheet)
+        alert.addAction(UIAlertAction(title: Constants.BUTTON_BOARDING, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func noRecipesFoundAlert() {
+        let alert = UIAlertController(title: Constants.TITLE_NOT_FOUND_RECIPE, message: Constants.BODY_NOT_FOUND_RECIPE, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.BUTTON_NOT_FOUND_RECIPE, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }

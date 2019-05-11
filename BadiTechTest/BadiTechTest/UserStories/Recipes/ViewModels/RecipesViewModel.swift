@@ -20,6 +20,10 @@ class RecipesViewModel {
         return dataSource.recipesArray?[index]
     }
     
+    func getHrefFromRecipe(atIndex index: Int) -> String? {
+        return dataSource.recipesArray?[index].href
+    }
+    
     func requestRecipes(ingredientsUrl: String, delegate: NetworkDelegate){
         
         dataSource.requestRecipes(delegate: delegate, ingredientsUrl: ingredientsUrl)
