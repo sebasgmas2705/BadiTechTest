@@ -39,4 +39,4 @@ With a little bit more time, I'd like to improve the UI of the app. My ideas are
 
 I learned swift less than a year ago.
 I decided to create an app for the iPhone and an app for the Apple Watch for my thesis and it was a success, I graduated with Honors in my thesis!
-This led me to look for a job as an iOS developer. I know I have a lot to learn yet and I think Badi is a match to start learning from the best.
+This led me to look for a job as an iOS developer and I ended up working where I am currently. I know I have a lot to learn yet and I think Badi is a match to start learning from the best.
