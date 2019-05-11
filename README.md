@@ -34,3 +34,9 @@ With a little bit more time, I'd like to improve the UI of the app. My ideas are
 - Fully customize the searchBar.
 - Redesign the cells where the images are loaded.
 - Customize the alert messages.
+
+## To Sum Up
+
+I learned swift less than a year ago.
+I decided to create an app for the iPhone and an app for the Apple Watch for thesis and it was a success!
+This led me to look for a job as an iOS developer. I know I have a lot to learn yet and I think Badi is a match to start learning from the best.
