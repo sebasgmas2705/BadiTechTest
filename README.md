@@ -6,6 +6,8 @@ Challenge sent by Badi and coded by Sebastián Miguel Gelabert Mas.
 
 In order to run this project just clone it and hit the run button in Xcode. It is  made for all those 'hangry' people. Come on, what are you waiting for!
 
+**Run the .xcworkspace**
+
 ## Architecture
 
 For the development of this project I have used the patter MVVM. I consider myself a beginner with this pattern but it is what I use for the daily basis at work, so let's embrace the continuous improvement and growth.
